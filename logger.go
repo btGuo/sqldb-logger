@@ -138,7 +138,7 @@ func (l *logger) log(ctx context.Context, lvl Level, msg string, start time.Time
 }
 
 // maxArgValueLen []byte and string more than this length will be truncated.
-const maxArgValueLen int = 64
+const maxArgValueLen int = 4096
 
 // parseArgs will trim argument value if it is []byte or string more than maxArgValueLen.
 // Copied from https://github.com/jackc/pgx/blob/f3a3ee1a0e5c8fc8991928bcd06fdbcd1ee9d05c/logger.go#L79
